@@ -4,18 +4,21 @@ fun main(args: Array<String>) {
     var myCircle : Shape
     var mySquare : Shape
     var myTriangle : Shape
+    var myEquilat : Triangle
     val reader = Scanner(System.`in`)
 
     myCircle = Circle("myCircle")
     mySquare = Square("mySquare")
     myTriangle = Triangle("myTriangle")
+    myEquilat = EquilateralTriangle("myEquilat")
 
     // Display initial User Prompt
     println("---------- Welcome to Shape Objects ----------")
     setTriangleStat(myTriangle)
     setCircleStat(myCircle)
     setSquareStat(mySquare)
-    printObjectStat(myTriangle, myCircle, mySquare)
+    setEquilatStat(myEquilat)
+    printObjectStat(myTriangle, myCircle, mySquare, myEquilat)
 }
 
 fun setTriangleStat(myTriangle : Triangle) {
@@ -46,9 +49,17 @@ fun setSquareStat(mySquare : Square) {
 
 }
 
-fun printObjectStat(myTriangle : Triangle, myCircle : Circle, mySquare : Square) {
+fun setEquilatStat(myEquilat : EquilateralTriangle) {
+    println("    4.) Equilateral Object")
+    print("        Enter side: ")
+    var length:Double = readLine()!!.toDouble()
+    myEquilat.setDimensions(length)
+}
+
+fun printObjectStat(myTriangle : Triangle, myCircle : Circle, mySquare : Square, myEquilat: EquilateralTriangle) {
     println("---------- Object Statistics -----------")
     myTriangle.printDimensions()
     myCircle.printDimensions()
     mySquare.printDimensions()
+    myEquilat.printDimensions()
 }
