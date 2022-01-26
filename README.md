@@ -4,6 +4,8 @@ Each of these subclasses extends Shape as each of them is a shape, however they 
 the area for each, and there are different values that need to be stored as dimensions. Finally, there is a 4th class (Equilateral Triangle) which
 extends the triangle class. This is slightly different as all 3 sides are the same, wheras with the normal triangle class, all 3 sides could be different.
 
+![image](https://user-images.githubusercontent.com/89669624/151084846-21fbec33-4950-4b8f-a8a8-4053a95eddf2.png)
+
 ## Shape Superclass
 An abstract class, the shape class is meant to act as a board for the other classes, as they are all shapes, but all differ slightly, requiring different
 values and different methods of calculating the area of the object. The methods in the superclass are overwritten, except for the showName() function that is
@@ -28,6 +30,7 @@ user enters in the values of the height and length. SetDimensions() is called, t
 private variables from 0.0 to what the user inputs. Finally, getArea() functio is called to calculate the area of the object, in this case, using Heron's formula
 to calculate the value of the area of the object. PrintDimensions() function is called when the values of all objects are input by the user, and prints all values
 to the screen.
+![image](https://user-images.githubusercontent.com/89669624/151084769-fe553cfe-c961-4b8b-bf13-4fd76f1feb9c.png)
 
 ## Equilateral Triangle
 An extension of the Triangle Object class, only occurs when all three values of the sides are the same length, stored as only 1 private double variable. Initialized
